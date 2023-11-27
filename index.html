@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+    <script>
+       
+            var peticion = new XMLHttpRequest(); //creamos un objeto XMLHttpRequest
+            peticion.open("GET", "servidor.php"); //le damos la ruta
+            peticion.send(); //enviamos la peticion
+            
+            peticion.onreadystatechange = function(e){
+                console.log("El estado de la conexión es: " + 
+                peticion.readyState);
+                console.log("Respuesta0 " + peticion.status);
+                console.log("Respuesta1 " + peticion.responseText);
+                console.log("Respuesta2 " + peticion.responseType);
+            }
+        
+    
+    </script>
+
+</body>
+
+</html>
